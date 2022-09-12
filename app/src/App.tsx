@@ -6,6 +6,9 @@ import {
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Nav from './components/Nav';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
 
 export function App() {
   return (
@@ -13,6 +16,9 @@ export function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

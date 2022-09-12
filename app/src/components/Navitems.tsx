@@ -15,20 +15,20 @@ export const serviceDropdown = [
   },
   {
     id: 2,
-    title: 'Gear',
-    path: './gear',
+    title: 'About',
+    path: './about',
     cName: 'menu-item',
   },
   {
     id: 2,
-    title: 'Water',
-    path: './water',
+    title: 'FAQ',
+    path: './faq',
     cName: 'menu-item',
   },
   {
     id: 3,
-    title: 'Counters',
-    path: './counters',
+    title: 'Contact',
+    path: './contact',
     cName: 'menu-item',
   },
 ];
