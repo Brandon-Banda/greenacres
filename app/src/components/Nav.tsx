@@ -1,27 +1,46 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
+import { CgMenuRound } from 'react-icons/cg';
 import { navItems } from './Navitems';
 import Dropdown from './Dropdown';
+import { ReactComponent as Facebook } from '../assets/facebook.svg';
+import { ReactComponent as Instagram } from '../assets/instagram.svg';
 
 function Navbar() {
   const [dropdown, setDropdown] = useState(false);
 
   return (
     <nav className="navbar">
-      {/* <Link to="/" className="navbar-logo">
-          flux
-        </Link> */}
+      <Link to="/">Green Acres Market of Alice TX</Link>
       <ul className="navbar-nav">
+        <li
+          className="nav-item" // {item.cName}
+        >
+          <a href="# " className="icon-button" draggable={false}>
+            <Facebook />
+          </a>
+        </li>
+        <li
+          className="nav-item" // {item.cName}
+        >
+          <a href="# " className="icon-button" draggable={false}>
+            <Instagram />
+          </a>
+        </li>
         {navItems.map((item) => {
           if (item.title) {
             return (
               <li
                 key={item.id}
                 className="nav-item" // {item.cName}
-                onClick={() => setDropdown(!dropdown)}
               >
-                <a href="#/" className="icon-button">
+                <a
+                  href="#/"
+                  className="icon-button"
+                  draggable={false}
+                  onClick={() => setDropdown(!dropdown)}
+                >
                   {' '}
                   {
                     <svg viewBox="0 0 320 512">

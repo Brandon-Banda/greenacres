@@ -2,6 +2,8 @@
 
 https://www.localmarketfoods.com/
 https://www.mobilefleamarket.com/
+https://web.archive.org/web/20211223093028/https://cottonbranchfarms.com/
+https://www.thecatsmarkets.com/?fbclid=IwAR0uBK8Bik6-Rgyj2VkSemBp1jtXIBF2vbVFULyj28JMDHJfDXdfEoVhLuQ
 
 // Misc links
 
@@ -24,6 +26,8 @@ get pictures of the place / logos / rsc
 Add social links
 
 Could add an email service on the site
+
+Change the website title dynamically dependent on page
 
 // log
 

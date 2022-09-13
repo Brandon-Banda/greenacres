@@ -7,13 +7,10 @@ function Dropdown() {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <ul
-      className={dropdown ? 'services-submenu clicked' : 'dropdown'}
-      onClick={() => setDropdown(!dropdown)}
-    >
+    <ul className={dropdown ? 'services-submenu clicked' : 'dropdown'}>
       {serviceDropdown.map((item) => {
         return (
-          <li key={item.id}>
+          <li key={item.id} onClick={() => setDropdown(!dropdown)}>
             <Link
               to={item.path}
               className={item.cName}

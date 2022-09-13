@@ -31,4 +31,10 @@ export const serviceDropdown = [
     path: './contact',
     cName: 'menu-item',
   },
+  {
+    id: 4,
+    title: 'Application',
+    path: './apply',
+    cName: 'menu-item',
+  },
 ];
