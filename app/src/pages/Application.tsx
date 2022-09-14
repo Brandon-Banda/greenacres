@@ -4,94 +4,106 @@ import moment from 'moment';
 
 function Application() {
   const [inputs, setInputs] = useState({});
+  const [data, setData] = useState('');
 
   const handleChange = (event: { target: { name?: any; value?: any } }) => {
-    const { name } = event.target;
-    const { value } = event.target;
+    const { name, value } = event.target;
     setInputs((values: any) => ({ ...values, [name]: value }));
   };
 
-  const handleSubmit = (event: { preventDefault: () => void }) => {
+  const handleSubmit = () => {
     event.preventDefault();
     console.log(inputs);
-    // handler for email sending
+    setData(JSON.stringify(inputs));
+    // handler for email sending;
   };
 
   const today = moment().startOf('day').format('MMM DD YYYY');
 
   return (
-    <>
+    <div className="main">
       <h1>Green Acres Market of Alice, TX - Vendor Contract</h1>
       <h2>greenacresmarketcr465@gmail.com</h2>
-      <div className="form-container">
-        <form onSubmit={handleSubmit}>
-          <label>
-            Business Name :
-            <input
-              type="text"
-              name="name"
-              value={inputs.name || ''}
-              onChange={handleChange}
-            />
-          </label>
-          <label>
-            Business Description (what you sell) :
-            <input
-              type="text"
-              name="description"
-              value={inputs.description || ''}
-              onChange={handleChange}
-            />
-          </label>
-          <label>
-            Business Owner’s Name :
-            <input
-              type="text"
-              name="ownerName"
-              value={inputs.ownerName || ''}
-              onChange={handleChange}
-            />
-          </label>
-          <label>
-            Vendor Signature:
-            <input
-              type="text"
-              name="signature"
-              value={inputs.signature || ''}
-              onChange={handleChange}
-            />
-          </label>
-          <label>
-            Date:
-            <input
-              type="text"
-              name="date"
-              value={today}
-              onChange={handleChange}
-              disabled
-            />
-          </label>
-          <label>
-            Vendor Email Address:
-            <input
-              type="text"
-              name="email"
-              value={inputs.email || ''}
-              onChange={handleChange}
-            />
-          </label>
-          <label>
-            Vendor Phone Number
-            <input
-              type="text"
-              name="phone"
-              value={inputs.phone || ''}
-              onChange={handleChange}
-            />
-          </label>
-          <input type="submit" />
-        </form>
-      </div>
+      <form onSubmit={handleSubmit}>
+        <label className="custom-field">
+          <input
+            type="text"
+            name="name"
+            value={inputs.name || ''}
+            onChange={handleChange}
+            placeholder="&nbsp;"
+          />
+          <span className="placeholder">Business Name</span>
+          <span className="error-message" />
+        </label>
+        <label className="custom-field">
+          <input
+            type="text"
+            name="description"
+            value={inputs.description || ''}
+            onChange={handleChange}
+            placeholder="&nbsp;"
+          />
+          <span className="placeholder">Business Description</span>
+          <span className="error-message" />
+        </label>
+        <label className="custom-field">
+          <input
+            type="text"
+            name="ownerName"
+            value={inputs.ownerName || ''}
+            onChange={handleChange}
+            placeholder="&nbsp;"
+          />
+          <span className="placeholder">Business Owner's Name</span>
+          <span className="error-message" />
+        </label>
+        <label className="custom-field">
+          <input
+            type="text"
+            name="signature"
+            value={inputs.signature || ''}
+            onChange={handleChange}
+            placeholder="&nbsp;"
+          />
+          <span className="placeholder">Vendor Signature</span>
+          <span className="error-message" />
+        </label>
+        <label className="custom-field">
+          <input
+            type="text"
+            name="date"
+            value={`Date: ${today}`}
+            onChange={handleChange}
+            disabled
+          />
+          <span className="placeholder" />
+          <span className="error-message" />
+        </label>
+        <label className="custom-field">
+          <input
+            type="text"
+            name="email"
+            value={inputs.email || ''}
+            onChange={handleChange}
+            placeholder="&nbsp;"
+          />
+          <span className="placeholder">Vendor Email Address</span>
+          <span className="error-message" />
+        </label>
+        <label className="custom-field">
+          <input
+            type="text"
+            name="phone"
+            value={inputs.phone || ''}
+            onChange={handleChange}
+            placeholder="&nbsp;"
+          />
+          <span className="placeholder">Vendor Phone Number</span>
+          <span className="error-message" />
+        </label>
+        <input type="submit" className="button" value="Submit Form" />
+      </form>
       <p>
         Vendor agrees to setup a booth for a NONREFUNDABLE fee of $30 for a
         10’x10’ space or $35 for a 12’x12’. Fees include promotion and
@@ -131,7 +143,8 @@ function Application() {
         you need to use another form of payment. Zelle: 361-533-2590 CashApp:
         $AlvaZambranoGAM PayPal: aiz72 @yahoo.com
       </p>
-    </>
+      <p>{data}</p>
+    </div>
   );
 }
 
