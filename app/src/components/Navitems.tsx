@@ -20,19 +20,19 @@ export const serviceDropdown = [
     cName: 'menu-item',
   },
   {
-    id: 2,
+    id: 3,
     title: 'FAQ',
     path: './faq',
     cName: 'menu-item',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Contact',
     path: './contact',
     cName: 'menu-item',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Application',
     path: './apply',
     cName: 'menu-item',
