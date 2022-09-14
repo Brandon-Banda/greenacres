@@ -21,11 +21,9 @@ Add pages: About, FAQ, Contact
 
 Add phone number / address at the top
 
-get pictures of the place / logos / rsc
-
-Add social links
-
 Could add an email service on the site
+
+# https://mailtrap.io/blog/react-send-email/
 
 Change the website title dynamically dependent on page
 

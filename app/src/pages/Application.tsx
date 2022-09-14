@@ -19,13 +19,6 @@ function Application() {
 
   const today = moment().startOf('day').format('MMM DD YYYY');
 
-  // Business Name -
-  // Business Description (what you sell) -
-  // Business Owner’s Name -
-
-  // Vendor Signature:                         Date:
-  // Vendor email address:                         Vendor Phone #
-
   return (
     <>
       <h1>Green Acres Market of Alice, TX - Vendor Contract</h1>
