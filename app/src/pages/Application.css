@@ -9,6 +9,11 @@
   font-size: 16px;
 }
 
+.form-container {
+  min-height: 100px;
+  z-index: 999;
+}
+
 *,
 *::before,
 *::after {

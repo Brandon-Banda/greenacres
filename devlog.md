@@ -17,11 +17,11 @@ https://www.thecatsmarkets.com/?fbclid=IwAR0uBK8Bik6-Rgyj2VkSemBp1jtXIBF2vbVFULy
 
 // TODO
 
-Add pages: About, FAQ, Contact
-
 Add phone number / address at the top
 
 Could add an email service on the site
+
+Improve css for responsiveness and support for mobile phone
 
 # https://mailtrap.io/blog/react-send-email/
 

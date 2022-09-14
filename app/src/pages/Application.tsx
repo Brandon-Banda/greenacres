@@ -24,86 +24,88 @@ function Application() {
     <div className="main">
       <h1>Green Acres Market of Alice, TX - Vendor Contract</h1>
       <h2>greenacresmarketcr465@gmail.com</h2>
-      <form onSubmit={handleSubmit}>
-        <label className="custom-field">
-          <input
-            type="text"
-            name="name"
-            value={inputs.name || ''}
-            onChange={handleChange}
-            placeholder="&nbsp;"
-          />
-          <span className="placeholder">Business Name</span>
-          <span className="error-message" />
-        </label>
-        <label className="custom-field">
-          <input
-            type="text"
-            name="description"
-            value={inputs.description || ''}
-            onChange={handleChange}
-            placeholder="&nbsp;"
-          />
-          <span className="placeholder">Business Description</span>
-          <span className="error-message" />
-        </label>
-        <label className="custom-field">
-          <input
-            type="text"
-            name="ownerName"
-            value={inputs.ownerName || ''}
-            onChange={handleChange}
-            placeholder="&nbsp;"
-          />
-          <span className="placeholder">Business Owner's Name</span>
-          <span className="error-message" />
-        </label>
-        <label className="custom-field">
-          <input
-            type="text"
-            name="signature"
-            value={inputs.signature || ''}
-            onChange={handleChange}
-            placeholder="&nbsp;"
-          />
-          <span className="placeholder">Vendor Signature</span>
-          <span className="error-message" />
-        </label>
-        <label className="custom-field">
-          <input
-            type="text"
-            name="date"
-            value={`Date: ${today}`}
-            onChange={handleChange}
-            disabled
-          />
-          <span className="placeholder" />
-          <span className="error-message" />
-        </label>
-        <label className="custom-field">
-          <input
-            type="text"
-            name="email"
-            value={inputs.email || ''}
-            onChange={handleChange}
-            placeholder="&nbsp;"
-          />
-          <span className="placeholder">Vendor Email Address</span>
-          <span className="error-message" />
-        </label>
-        <label className="custom-field">
-          <input
-            type="text"
-            name="phone"
-            value={inputs.phone || ''}
-            onChange={handleChange}
-            placeholder="&nbsp;"
-          />
-          <span className="placeholder">Vendor Phone Number</span>
-          <span className="error-message" />
-        </label>
-        <input type="submit" className="button" value="Submit Form" />
-      </form>
+      <div className="form-container">
+        <form onSubmit={handleSubmit}>
+          <label className="custom-field">
+            <input
+              type="text"
+              name="name"
+              value={inputs.name || ''}
+              onChange={handleChange}
+              placeholder="&nbsp;"
+            />
+            <span className="placeholder">Business Name</span>
+            <span className="error-message" />
+          </label>
+          <label className="custom-field">
+            <input
+              type="text"
+              name="description"
+              value={inputs.description || ''}
+              onChange={handleChange}
+              placeholder="&nbsp;"
+            />
+            <span className="placeholder">Business Description</span>
+            <span className="error-message" />
+          </label>
+          <label className="custom-field">
+            <input
+              type="text"
+              name="ownerName"
+              value={inputs.ownerName || ''}
+              onChange={handleChange}
+              placeholder="&nbsp;"
+            />
+            <span className="placeholder">Business Owner's Name</span>
+            <span className="error-message" />
+          </label>
+          <label className="custom-field">
+            <input
+              type="text"
+              name="signature"
+              value={inputs.signature || ''}
+              onChange={handleChange}
+              placeholder="&nbsp;"
+            />
+            <span className="placeholder">Vendor Signature</span>
+            <span className="error-message" />
+          </label>
+          <label className="custom-field">
+            <input
+              type="text"
+              name="date"
+              value={`Date: ${today}`}
+              onChange={handleChange}
+              disabled
+            />
+            <span className="placeholder" />
+            <span className="error-message" />
+          </label>
+          <label className="custom-field">
+            <input
+              type="text"
+              name="email"
+              value={inputs.email || ''}
+              onChange={handleChange}
+              placeholder="&nbsp;"
+            />
+            <span className="placeholder">Vendor Email Address</span>
+            <span className="error-message" />
+          </label>
+          <label className="custom-field">
+            <input
+              type="text"
+              name="phone"
+              value={inputs.phone || ''}
+              onChange={handleChange}
+              placeholder="&nbsp;"
+            />
+            <span className="placeholder">Vendor Phone Number</span>
+            <span className="error-message" />
+          </label>
+          <input type="submit" className="button" value="Submit Form" />
+        </form>
+      </div>
       <p>
         Vendor agrees to setup a booth for a NONREFUNDABLE fee of $30 for a
         10’x10’ space or $35 for a 12’x12’. Fees include promotion and

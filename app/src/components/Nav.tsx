@@ -6,6 +6,7 @@ import { navItems } from './Navitems';
 import Dropdown from './Dropdown';
 import { ReactComponent as Facebook } from '../assets/facebook.svg';
 import { ReactComponent as Instagram } from '../assets/instagram.svg';
+import { ReactComponent as Pindrop } from '../assets/pindrop.svg';
 
 function Navbar() {
   const [dropdown, setDropdown] = useState(false);
@@ -14,6 +15,12 @@ function Navbar() {
     <nav className="navbar">
       {/* <Link to="/">Green Acres Market of Alice TX</Link> */}
       <ul className="navbar-nav">
+        <li className="nav-item">
+          <Pindrop />
+        </li>
+        <li className="nav-text">
+          <div>1047 CR-465, Alice, TX, United States, Texas</div>
+        </li>
         <li
           className="nav-item" // {item.cName}
         >
