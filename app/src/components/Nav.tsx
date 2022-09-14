@@ -12,19 +12,31 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link to="/">Green Acres Market of Alice TX</Link>
+      {/* <Link to="/">Green Acres Market of Alice TX</Link> */}
       <ul className="navbar-nav">
         <li
           className="nav-item" // {item.cName}
         >
-          <a href="# " className="icon-button" draggable={false}>
+          <a
+            href="https://www.facebook.com/people/Green-Acres-Market-of-Alice-TX/100066629296179/"
+            className="icon-button"
+            draggable={false}
+            target="_blank"
+            rel="noreferrer"
+          >
             <Facebook />
           </a>
         </li>
         <li
           className="nav-item" // {item.cName}
         >
-          <a href="# " className="icon-button" draggable={false}>
+          <a
+            href="https://www.instagram.com/greenacresmarketalice/"
+            className="icon-button"
+            draggable={false}
+            target="_blank"
+            rel="noreferrer"
+          >
             <Instagram />
           </a>
         </li>
