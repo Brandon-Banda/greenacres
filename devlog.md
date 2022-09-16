@@ -15,17 +15,26 @@ https://www.thecatsmarkets.com/?fbclid=IwAR0uBK8Bik6-Rgyj2VkSemBp1jtXIBF2vbVFULy
 
 - https://www.instagram.com/greenacresmarketalice/
 
+Change the website title dynamically dependent on page
+
 // TODO
 
-Add phone number / address at the top
+- [ ] Fill out the todo more
+- [ ] Fix the navmenu button problem where it needs to be hrefd to # before being clickable
+- [ ] Application page form validation
 
-Could add an email service on the site
+- [x] Add social links buttons
 
-Improve css for responsiveness and support for mobile phone
+- [ ] Footer
+
+- [x] styled contract form
+      Add phone number / address at the top
+
+- [ ] Could add an email service on the site
 
 # https://mailtrap.io/blog/react-send-email/
 
-Change the website title dynamically dependent on page
+- [ ] Improve css for responsiveness and support for mobile phone
 
 // log
 
