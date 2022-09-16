@@ -1,3 +1,8 @@
+p {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
 .main {
   width: 100vw;
   height: 100vh;
@@ -73,7 +78,7 @@
   text-overflow: ellipsis;
   top: 22px;
   line-height: 100%;
-  transform: translateY(-50%);
+  transform: translateY(-125%);
   color: #aaa;
   transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
 }
@@ -144,4 +149,17 @@
 
 .button:hover {
   background-color: #45a049;
+}
+
+.payment-methods {
+  color: #538135;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.payment-methods label {
+  width: 100%;
 }
