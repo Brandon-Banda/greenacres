@@ -10,10 +10,11 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Application from './pages/Application';
+import Footer from './components/Footer';
 
 export function App() {
   return (
-    <div>
+    <div className="app-container">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,6 +24,7 @@ export function App() {
         <Route path="/apply" element={<Application />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
