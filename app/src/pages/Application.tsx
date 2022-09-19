@@ -14,6 +14,8 @@ function Application() {
     setInputs((values: any) => ({ ...values, [name]: value }));
   };
 
+  const handlePhoneNumber = () => {};
+
   const handleSubmit = () => {
     event.preventDefault();
     console.log(inputs);
