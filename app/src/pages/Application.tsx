@@ -119,7 +119,7 @@ function Application() {
                 <span className="placeholder">Business Owner's Name</span>
                 <span className="error-message" />
               </label>
-              <input type="submit" className="button" value="Submit Form" />
+              <input type="submit" className="button" value="Submit" />
             </form>
           </div>
         </div>
