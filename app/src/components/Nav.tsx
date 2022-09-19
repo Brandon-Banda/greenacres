@@ -15,7 +15,7 @@ function Navbar() {
     <nav className="navbar">
       {/* <Link to="/">Green Acres Market of Alice TX</Link> */}
       <ul className="navbar-nav">
-        <li className="nav-item">
+        <li className="nav-item" style={{ height: '60px', width: '25px' }}>
           <Pindrop />
         </li>
         <li className="nav-text">

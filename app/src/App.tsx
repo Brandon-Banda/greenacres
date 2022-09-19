@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Application from './pages/Application';
 import Footer from './components/Footer';
+import './App.css';
 
 export function App() {
   return (

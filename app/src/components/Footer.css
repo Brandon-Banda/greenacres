@@ -11,13 +11,13 @@
   flex-direction: column;
   justify-content: center;
   max-width: 1000px;
-  margin: 0 auto;
+  align-items: center;
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   margin-left: 60px;
 }
 
@@ -29,7 +29,13 @@
 }
 
 .row {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
-  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 18px;
+  color: white;
+  align-items: center;
+  justify-content: center;
 }
