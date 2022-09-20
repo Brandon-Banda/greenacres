@@ -14,8 +14,28 @@ const data = [
   },
   {
     question: 'When',
-    answer: 'No when did i ask',
+    answer: '10am to 4pm',
     key: 2,
+  },
+  {
+    question: 'How',
+    answer: 'do thing apply yes',
+    key: 3,
+  },
+  {
+    question: 'Price',
+    answer: '10x10 for $30 or 12x12 for $35',
+    key: 4,
+  },
+  {
+    question: 'When is the next one',
+    answer: 'We aim monthly',
+    key: 5,
+  },
+  {
+    question: 'Cash, Card?',
+    answer: 'Most vendors take credit cards',
+    key: 4,
   },
 ];
 

@@ -185,9 +185,9 @@ function Application() {
           <label>CashApp: $AlvaZambranoGAM </label>
           <label>PayPal: aiz72 @yahoo.com</label>
         </div>
-        <div className="temp-data">
+        <pre>
           <p>{data}</p>
-        </div>
+        </pre>
       </div>
     </div>
   );
