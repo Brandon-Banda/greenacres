@@ -10,7 +10,7 @@ function Application() {
   const handleChange = (event: {
     target: { name?: any; value?: any; email?: any; date?: any };
   }) => {
-    const { name, value, email, date } = event.target;
+    const { name, value, email, date, businessDescription } = event.target;
     setInputs((values: any) => ({ ...values, [name]: value }));
   };
 
@@ -20,7 +20,7 @@ function Application() {
     event.preventDefault();
     console.log(inputs);
     inputs['date'] = today;
-    const jsonData = JSON.stringify(inputs);
+    const jsonData = JSON.stringify(inputs, null, 2);
     setInputs((values: any) => ({ ...values, [name]: today }));
     setData(jsonData);
   };
@@ -51,8 +51,8 @@ function Application() {
               <label className="custom-field">
                 <input
                   type="text"
-                  name="phone"
-                  value={inputs.phone || ''}
+                  name="phoneNumber"
+                  value={inputs.phoneNumber || ''}
                   onChange={handleChange}
                   placeholder="&nbsp;"
                 />
@@ -91,8 +91,8 @@ function Application() {
               <label className="custom-field">
                 <input
                   type="text"
-                  name="name"
-                  value={inputs.name || ''}
+                  name="businessName"
+                  value={inputs.businessName || ''}
                   onChange={handleChange}
                   placeholder="&nbsp;"
                 />
@@ -102,8 +102,8 @@ function Application() {
               <label className="custom-field">
                 <input
                   type="text"
-                  name="description"
-                  value={inputs.description || ''}
+                  name="businessDescription"
+                  value={inputs.businessDescription || ''}
                   onChange={handleChange}
                   placeholder="&nbsp;"
                 />
@@ -185,7 +185,9 @@ function Application() {
           <label>CashApp: $AlvaZambranoGAM </label>
           <label>PayPal: aiz72 @yahoo.com</label>
         </div>
-        <p>{data}</p>
+        <div className="temp-data">
+          <p>{data}</p>
+        </div>
       </div>
     </div>
   );
