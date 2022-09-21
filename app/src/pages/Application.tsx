@@ -1,20 +1,30 @@
 import { useState } from 'react';
 import './Application.css';
 import moment from 'moment';
+import PhoneInput from 'react-phone-input-2';
+import './a.css';
 
 function Application() {
   const today = moment().startOf('day').format('MMM DD YYYY');
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState({
+    email: '',
+    ownerName: '',
+    businessName: '',
+    businessDescription: '',
+    signature: '',
+    phoneNumber: '',
+  });
   const [data, setData] = useState('');
 
-  const handleChange = (event: {
-    target: { name?: any; value?: any; email?: any; date?: any };
-  }) => {
-    const { name, value, email, date, businessDescription } = event.target;
+  const handleChange = (e) => {
+    const { name, value, email, date, businessDescription } = e.target;
     setInputs((values: any) => ({ ...values, [name]: value }));
   };
 
-  const handlePhoneNumber = () => {};
+  const handlePhoneNumber = (e) => {
+    const phoneNumber = e.target;
+    setInputs((values: any) => ({ ...values, [name]: value }));
+  };
 
   const handleSubmit = () => {
     event.preventDefault();
@@ -49,14 +59,11 @@ function Application() {
                 <span className="error-message" />
               </label>
               <label className="custom-field">
-                <input
-                  type="text"
-                  name="phoneNumber"
+                <PhoneInput>
+                  country={'us'}
                   value={inputs.phoneNumber || ''}
                   onChange={handleChange}
-                  placeholder="&nbsp;"
-                />
-                <span className="placeholder">Vendor Phone Number</span>
+                </PhoneInput>
                 <span className="error-message" />
               </label>
               <label className="custom-field">
