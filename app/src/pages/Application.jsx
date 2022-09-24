@@ -17,21 +17,21 @@ function Application() {
   const [data, setData] = useState('');
 
   const handleChange = (e) => {
-    const { name, value, email, date, businessDescription } = e.target;
-    setInputs((values: any) => ({ ...values, [name]: value }));
+    const { value } = e.target;
+    setInputs({ ...inputs, [e.target.name]: value });
   };
 
   const handlePhoneNumber = (e) => {
     const phoneNumber = e.target;
-    setInputs((values: any) => ({ ...values, [name]: value }));
+    setInputs({ ...inputs });
   };
 
   const handleSubmit = () => {
     event.preventDefault();
     console.log(inputs);
-    inputs['date'] = today;
+    inputs.date = today;
     const jsonData = JSON.stringify(inputs, null, 2);
-    setInputs((values: any) => ({ ...values, [name]: today }));
+    setInputs({ ...inputs });
     setData(jsonData);
   };
 
@@ -51,7 +51,7 @@ function Application() {
                 <input
                   type="text"
                   name="email"
-                  value={inputs.email || ''}
+                  value={inputs.email}
                   onChange={handleChange}
                   placeholder="&nbsp;"
                 />
@@ -61,7 +61,7 @@ function Application() {
               <label className="custom-field">
                 <PhoneInput>
                   country={'us'}
-                  value={inputs.phoneNumber || ''}
+                  value={inputs.phoneNumber}
                   onChange={handleChange}
                 </PhoneInput>
                 <span className="error-message" />
@@ -82,7 +82,7 @@ function Application() {
                 <input
                   type="text"
                   name="signature"
-                  value={inputs.signature || ''}
+                  value={inputs.signature}
                   onChange={handleChange}
                   placeholder="&nbsp;"
                 />
@@ -99,7 +99,7 @@ function Application() {
                 <input
                   type="text"
                   name="businessName"
-                  value={inputs.businessName || ''}
+                  value={inputs.businessName}
                   onChange={handleChange}
                   placeholder="&nbsp;"
                 />
@@ -121,7 +121,7 @@ function Application() {
                 <input
                   type="text"
                   name="ownerName"
-                  value={inputs.ownerName || ''}
+                  value={inputs.ownerName}
                   onChange={handleChange}
                   placeholder="&nbsp;"
                 />

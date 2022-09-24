@@ -35,13 +35,13 @@ const data = [
   {
     question: 'Cash, Card?',
     answer: 'Most vendors take credit cards',
-    key: 4,
+    key: 6,
   },
 ];
 
 function FAQ() {
   const [selected, setSelected] = useState(null);
-  const toggle = (i: any) => {
+  const toggle = (i) => {
     if (selected === i) {
       return setSelected(null);
     }
@@ -77,16 +77,3 @@ function FAQ() {
 }
 
 export default FAQ;
-
-/*
-
-Questions could be:
-
-Parking? where?
-
-Restroom?
-
-Dates? vary
-
-
-*/
