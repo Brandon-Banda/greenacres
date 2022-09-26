@@ -1,8 +1,1 @@
-Website
-
-Tech Stack:
-- Vite (ESbuild)
-- React
-- Typescript
-- Vitest
-- Airbnb Eslint config
+Website for Green Acres Market of Alice, TX

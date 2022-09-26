@@ -52,7 +52,8 @@ function Navbar() {
             return (
               <li
                 key={item.id}
-                className="nav-item" // {item.cName}
+                className="nav-item"
+                onClick={() => setDropdown(!dropdown)} // {item.cName}
               >
                 <a
                   href="#/"
