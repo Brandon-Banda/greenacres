@@ -20,7 +20,7 @@ Change the website title dynamically dependent on page
 // TODO
 
 - [ ] Fill out the todo more
-- [ ] Fix the navmenu button problem where it needs to be hrefd to # before being clickable
+- [x] Fix the navmenu button problem where it needs to be hrefd to # before being clickable
 - [ ] Application page form validation
 
 - [x] Add social links buttons

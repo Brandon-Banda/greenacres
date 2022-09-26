@@ -4,3 +4,10 @@
 
 .container img {
 }
+
+.about {
+  min-height: 300px;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}

@@ -13,26 +13,43 @@ function Application() {
     businessDescription: '',
     signature: '',
     phoneNumber: '',
+    date: today,
   });
+
   const [data, setData] = useState('');
+  const [error, setError] = useState(false);
+
+  function isValidEmail(email) {
+    return new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(email);
+  }
 
   const handleChange = (e) => {
     const { value } = e.target;
     setInputs({ ...inputs, [e.target.name]: value });
+    if (!isValidEmail(inputs.email)) {
+      setError(true);
+    } else {
+      setError(false);
+    }
   };
 
-  const handlePhoneNumber = (e) => {
-    const phoneNumber = e.target;
-    setInputs({ ...inputs });
+  const handleName = (e) => {
+    const value = e.target.value.replace(/[^a-z]/gi, '');
+    setInputs({ ...inputs, [e.target.name]: value });
   };
 
-  const handleSubmit = () => {
-    event.preventDefault();
-    console.log(inputs);
-    inputs.date = today;
-    const jsonData = JSON.stringify(inputs, null, 2);
-    setInputs({ ...inputs });
-    setData(jsonData);
+  const handleSubmit = (e) => {
+    if (error == false) {
+      e.preventDefault();
+      inputs.date = today;
+      const jsonData = JSON.stringify(inputs, null, 2);
+      setInputs({ ...inputs });
+      setData(jsonData);
+      console.log(inputs.phoneNumber);
+    } else {
+      e.preventDefault();
+      alert('Please fill out everything correctly.');
+    }
   };
 
   return (
@@ -59,18 +76,14 @@ function Application() {
                 <span className="error-message" />
               </label>
               <label className="custom-field">
-                <PhoneInput>
-                  country={'us'}
-                  value={inputs.phoneNumber}
-                  onChange={handleChange}
-                </PhoneInput>
+                <PhoneInput country={'us'} value={inputs.phoneNumber} />
                 <span className="error-message" />
               </label>
               <label className="custom-field">
                 <input
                   type="text"
                   name="date"
-                  value={`Date: ${today}`}
+                  value={inputs.date}
                   onChange={handleChange}
                   style={{ cursor: 'not-allowed' }}
                   disabled
@@ -100,7 +113,7 @@ function Application() {
                   type="text"
                   name="businessName"
                   value={inputs.businessName}
-                  onChange={handleChange}
+                  onChange={handleName}
                   placeholder="&nbsp;"
                 />
                 <span className="placeholder">Business Name</span>
@@ -122,7 +135,7 @@ function Application() {
                   type="text"
                   name="ownerName"
                   value={inputs.ownerName}
-                  onChange={handleChange}
+                  onChange={handleName}
                   placeholder="&nbsp;"
                 />
                 <span className="placeholder">Business Owner's Name</span>
