@@ -3,6 +3,9 @@ import './Application.css';
 import moment from 'moment';
 import PhoneInput from 'react-phone-input-2';
 import './a.css';
+import ModalComponent from '../components/ModalComponent';
+import Button from 'react-bootstrap/Button';
+import './modal.css';
 
 function Application() {
   const today = moment().startOf('day').format('MMM DD YYYY');
@@ -18,6 +21,8 @@ function Application() {
 
   const [data, setData] = useState('');
   const [error, setError] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
+  const [hasSigned, setHasSigned] = useState(false);
 
   function isValidEmail(email) {
     return new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(email);
@@ -76,7 +81,11 @@ function Application() {
                 <span className="error-message" />
               </label>
               <label className="custom-field">
-                <PhoneInput country={'us'} value={inputs.phoneNumber} />
+                <PhoneInput
+                  country={'us'}
+                  countryCodeEditable={false}
+                  value={inputs.phoneNumber}
+                />
                 <span className="error-message" />
               </label>
               <label className="custom-field">
@@ -92,15 +101,21 @@ function Application() {
                 <span className="error-message" />
               </label>
               <label className="custom-field">
-                <input
-                  type="text"
-                  name="signature"
-                  value={inputs.signature}
-                  onChange={handleChange}
-                  placeholder="&nbsp;"
-                />
-                <span className="placeholder">Vendor Signature</span>
-                <span className="error-message" />
+                {!hasSigned ? (
+                  <>
+                    <input
+                      type="text"
+                      name="signature"
+                      value={inputs.signature}
+                      onClick={() => setModalShow(true)}
+                      placeholder="&nbsp;"
+                    />
+                    <span className="placeholder">Vendor Signature</span>
+                    <span className="error-message" />
+                  </>
+                ) : (
+                  <div> Done</div>
+                )}
               </label>
             </form>
           </div>
@@ -147,6 +162,7 @@ function Application() {
         </div>
       </div>
       <div className="contract-section">
+        <ModalComponent show={modalShow} onHide={() => setModalShow(false)} />
         <p>
           Vendor agrees to setup a booth for a
           <b style={{ color: '#538135' }}> NONREFUNDABLE </b>

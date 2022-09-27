@@ -25,7 +25,9 @@ Change the website title dynamically dependent on page
 
 - [x] Add social links buttons
 
-- [ ] Footer
+- [x] Footer
+
+- [ ] Add onClick to the close button in the modal to save the signature and replace the initial button with some information stating you've signed
 
 - [x] styled contract form
       Add phone number / address at the top
@@ -35,6 +37,8 @@ Change the website title dynamically dependent on page
 # https://mailtrap.io/blog/react-send-email/
 
 - [ ] Improve css for responsiveness and support for mobile phone
+
+- [ ] Conditionally render "vendor signature" or the signature pad screen
 
 // log
 
