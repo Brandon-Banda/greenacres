@@ -19,15 +19,16 @@ Change the website title dynamically dependent on page
 
 // TODO
 
-- [ ] Fill out the todo more
+- [ ] create base64 image onClick save and display it after signing
+
 - [x] Fix the navmenu button problem where it needs to be hrefd to # before being clickable
-- [ ] Application page form validation
+- [x] Application page form validation
 
 - [x] Add social links buttons
 
 - [x] Footer
 
-- [ ] Add onClick to the close button in the modal to save the signature and replace the initial button with some information stating you've signed
+- [x] Add onClick to the close button in the modal to save the signature and replace the initial button with some information stating you've signed
 
 - [x] styled contract form
       Add phone number / address at the top
@@ -36,9 +37,7 @@ Change the website title dynamically dependent on page
 
 # https://mailtrap.io/blog/react-send-email/
 
-- [ ] Improve css for responsiveness and support for mobile phone
-
-- [ ] Conditionally render "vendor signature" or the signature pad screen
+- [x] Conditionally render "vendor signature" or the signature pad screen
 
 // log
 

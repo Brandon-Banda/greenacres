@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './Application.css';
 import moment from 'moment';
 import PhoneInput from 'react-phone-input-2';
 import './a.css';
 import ModalComponent from '../components/ModalComponent';
-import Button from 'react-bootstrap/Button';
 import './modal.css';
+import * as htmlToImage from 'html-to-image';
 
 function Application() {
   const today = moment().startOf('day').format('MMM DD YYYY');
@@ -24,10 +24,31 @@ function Application() {
   const [modalShow, setModalShow] = useState(false);
   const [hasSigned, setHasSigned] = useState(false);
 
-  const handleSignature = (sigRef) => {
+  const ref = useRef();
+
+  const handleSignature = (signature) => {
     setHasSigned(!hasSigned);
     console.log('signed');
-    //console.log(refs.witnessOne.toDataURL());
+
+    function snap() {
+      // Screenshot
+      var node = document.getElementById('modal-body');
+      htmlToImage
+        .toPng(node)
+        .then(function (dataUrl) {
+          var img = new Image();
+          img.src = dataUrl;
+          console.log(dataUrl);
+          //document.body.appendChild(img);
+
+          // var shareImg = document.getElementById("share");
+          // shareImg.src = dataUrl;
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    }
+    snap();
   };
 
   function isValidEmail(email) {
@@ -108,17 +129,18 @@ function Application() {
               </label>
               <label className="custom-field">
                 {!hasSigned ? (
-                  <>
+                  <div>
                     <input
                       type="text"
                       name="signature"
                       value={inputs.signature}
                       onClick={() => setModalShow(true)}
                       placeholder="&nbsp;"
+                      readOnly
                     />
                     <span className="placeholder">Vendor Signature</span>
                     <span className="error-message" />
-                  </>
+                  </div>
                 ) : (
                   <div> Done</div>
                 )}
