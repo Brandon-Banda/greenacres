@@ -24,6 +24,12 @@ function Application() {
   const [modalShow, setModalShow] = useState(false);
   const [hasSigned, setHasSigned] = useState(false);
 
+  const handleSignature = (sigRef) => {
+    setHasSigned(!hasSigned);
+    console.log('signed');
+    //console.log(refs.witnessOne.toDataURL());
+  };
+
   function isValidEmail(email) {
     return new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(email);
   }
@@ -162,7 +168,11 @@ function Application() {
         </div>
       </div>
       <div className="contract-section">
-        <ModalComponent show={modalShow} onHide={() => setModalShow(false)} />
+        <ModalComponent
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          handlesignature={handleSignature}
+        />
         <p>
           Vendor agrees to setup a booth for a
           <b style={{ color: '#538135' }}> NONREFUNDABLE </b>

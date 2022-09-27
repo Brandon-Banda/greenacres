@@ -17,7 +17,7 @@ function ModalComponent(props) {
         <SignatureCanvas width={2000} height={500} />
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.setHasSigned}>Save</Button>
+        <Button onClick={props.handlesignature}>Save</Button>
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
