@@ -1,8 +1,9 @@
-.container {
+.home-container {
   width: 100%;
 }
 
-.container img {
+.home-container img {
+  width: 100%;
 }
 
 .about {

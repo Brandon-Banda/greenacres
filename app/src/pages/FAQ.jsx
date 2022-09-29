@@ -3,39 +3,46 @@ import { useState } from 'react';
 
 const data = [
   {
-    question: 'Parking?',
-    answer: 'Park there',
+    question: 'Where do we park?',
+    answer: 'Feel free to park anywhere on the grass!',
     key: 0,
   },
   {
-    question: 'Restroom?',
-    answer: 'Ya man',
+    question: 'Are there restrooms?',
+    answer: 'We have a restroom for anyone who might need it.',
     key: 1,
   },
   {
-    question: 'When',
-    answer: '10am to 4pm',
+    question: 'What are the hours?',
+    answer: 'We operate 10AM-4PM, but this fluctuates depending on weather.',
     key: 2,
   },
   {
-    question: 'How',
-    answer: 'do thing apply yes',
+    question: 'How do I sell here?',
+    answer:
+      'Submit an application to become a vendor via the application page of the website.',
     key: 3,
   },
   {
-    question: 'Price',
-    answer: '10x10 for $30 or 12x12 for $35',
+    question: 'How much does it cost to sell here?',
+    answer: 'We sell by sizing. 10x10 for $30 or 12x12 for $35.',
     key: 4,
   },
   {
-    question: 'When is the next one',
-    answer: 'We aim monthly',
+    question: 'When is the next one?',
+    answer:
+      'We aim for events monthly. Accurate updates will be posted on our Facebook.',
     key: 5,
   },
   {
     question: 'Cash, Card?',
-    answer: 'Most vendors take credit cards',
+    answer: 'Most vendors accept credit cards.',
     key: 6,
+  },
+  {
+    question: 'Other questions',
+    answer: 'Call (361) 533 - 2590 for any unanswered questions.',
+    key: 7,
   },
 ];
 
@@ -50,8 +57,8 @@ function FAQ() {
   };
 
   return (
-    <>
-      <h1> FAQ </h1>
+    <div className="container">
+      <div className="heading"> Frequently asked Questions</div>
       <div className="wrapper">
         <div className="accordion">
           {data.map((item, i) => (
@@ -72,7 +79,7 @@ function FAQ() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

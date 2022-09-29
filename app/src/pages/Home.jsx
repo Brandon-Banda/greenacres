@@ -2,15 +2,13 @@ import './Home.css';
 
 function Home() {
   return (
-    <div className="container">
-      <h1>Hello World</h1>
+    <div className="home-container">
       <img src="logo.jpg" alt="logo" />
       <div className="about">
-        Providing a venue where crafters, makers, bakers, creatives and
-        collectors can market their goods. Also supporting Direct Sales small
-        businesses. Encouraging the community to shop and buy local and for
-        small businesses to support each other. Supporting small businesses to
-        get their name out there.
+        Green Acres provides a venue where artists and collectors such as
+        crafters, makers, bakers, and many others can market their goods. We
+        support small businesses doing Direct Sales. We encourage the community
+        to buy local and support small business.
       </div>
     </div>
   );

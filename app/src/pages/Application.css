@@ -44,6 +44,32 @@ p {
   box-sizing: border-box;
 }
 
+@media only screen and (max-width: 400px) {
+  .custom-field {
+    width: 160px;
+  }
+
+  .react-tel-input {
+    width: 75%;
+    height: 50%;
+  }
+
+  .custom-field input {
+    width: 75%;
+    height: 50%;
+  }
+
+  .form-control {
+    width: 75%;
+    height: 50;
+  }
+}
+
+.signature-container img {
+  max-height: 100px;
+  max-width: 200px;
+}
+
 .custom-field {
   position: relative;
   border-top: 20px solid transparent;

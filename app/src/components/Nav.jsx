@@ -13,13 +13,17 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* <Link to="/">Green Acres Market of Alice TX</Link> */}
+      <div className="topleft">
+        <Link to="/">
+          <img src="marketlogo.png" />
+        </Link>
+      </div>
       <ul className="navbar-nav">
         <li className="nav-item" style={{ height: '60px', width: '25px' }}>
           <Pindrop />
         </li>
         <li className="nav-text">
-          <div>1047 CR-465, Alice, TX, United States, Texas</div>
+          <div>1047 CR-465, Alice, TX</div>
         </li>
         <li
           className="nav-item" // {item.cName}

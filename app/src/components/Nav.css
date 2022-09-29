@@ -8,6 +8,18 @@
   --speed: 500ms;
 }
 
+.topleft {
+  justify-content: space-between;
+  color: black;
+  float: left;
+  height: 100%;
+}
+
+.topleft img {
+  height: 100%;
+  padding: 10px;
+}
+
 ul {
   list-style: none;
   margin: 0;
