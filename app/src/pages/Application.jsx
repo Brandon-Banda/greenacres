@@ -14,7 +14,7 @@ function Application() {
     ownerName: '',
     businessName: '',
     businessDescription: '',
-    signature: '',
+    signature: false,
     phoneNumber: '',
     date: today,
   });
@@ -43,6 +43,7 @@ function Application() {
   };
   const handleSignature = () => {
     setHasSigned(!hasSigned);
+    setInputs({...inputs, signature: true})
     console.log('signed');
     snap();
     console.log(snap());
@@ -63,7 +64,7 @@ function Application() {
   };
 
   const handleName = (e) => {
-    const value = e.target.value.replace(/[^a-z]/gi, '');
+    const value = e.target.value.replace(/'[^a-z ]/gi, '');
     setInputs({ ...inputs, [e.target.name]: value });
   };
 
@@ -79,7 +80,10 @@ function Application() {
       e.preventDefault();
       alert('Please fill out everything correctly.');
     }
+    // error={value ? (isValidPhoneNumber(value) ? undefined : 'Invalid phone number') : 'Phone number required'}/>
   };
+
+  const [cell, setCell] = useState('');
 
   return (
     <div className="main">
@@ -109,6 +113,7 @@ function Application() {
                   country={'us'}
                   countryCodeEditable={false}
                   value={inputs.phoneNumber}
+                  onChange={() => setInputs({...inputs, phoneNumber: inputs.phoneNumber})}
                 />
                 <span className="error-message" />
               </label>
@@ -135,8 +140,7 @@ function Application() {
                     <input
                       type="text"
                       name="signature"
-                      value={inputs.signature}
-                      onClick={() => setModalShow(true)}
+                      onClick={() => {setModalShow(true);}}
                       placeholder="&nbsp;"
                       readOnly
                     />
