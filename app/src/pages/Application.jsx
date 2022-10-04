@@ -43,7 +43,7 @@ function Application() {
   };
   const handleSignature = () => {
     setHasSigned(!hasSigned);
-    setInputs({...inputs, signature: true})
+    setInputs({ ...inputs, signature: true });
     console.log('signed');
     snap();
     console.log(snap());
@@ -113,7 +113,9 @@ function Application() {
                   country={'us'}
                   countryCodeEditable={false}
                   value={inputs.phoneNumber}
-                  onChange={() => setInputs({...inputs, phoneNumber: inputs.phoneNumber})}
+                  onChange={() =>
+                    setInputs({ ...inputs, phoneNumber: inputs.phoneNumber })
+                  }
                 />
                 <span className="error-message" />
               </label>
@@ -140,7 +142,9 @@ function Application() {
                     <input
                       type="text"
                       name="signature"
-                      onClick={() => {setModalShow(true);}}
+                      onClick={() => {
+                        setModalShow(true);
+                      }}
                       placeholder="&nbsp;"
                       readOnly
                     />
@@ -149,7 +153,7 @@ function Application() {
                   </div>
                 ) : (
                   <div className="signature-container">
-                    <img src={snap()}></img>
+                    <img draggable={false} src={snap()}></img>
                   </div>
                 )}
               </label>
@@ -254,7 +258,7 @@ function Application() {
         <div className="payment-methods">
           <label>Zelle: 361-533-2590 </label>
           <label>CashApp: $AlvaZambranoGAM </label>
-          <label>PayPal: aiz72 @yahoo.com</label>
+          <label>PayPal: aiz72@yahoo.com</label>
         </div>
         <pre>
           <p>{data}</p>

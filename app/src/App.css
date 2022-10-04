@@ -1,6 +1,7 @@
 .app-container {
   align-items: center;
   justify-content: center;
+  background-color: #1c1e1f;
 }
 
 ::-webkit-scrollbar {

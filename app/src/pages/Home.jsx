@@ -3,7 +3,7 @@ import './Home.css';
 function Home() {
   return (
     <div className="home-container">
-      <img src="logo.jpg" alt="logo" />
+      <img src="fall.png" alt="logo" draggable={false} />
       <div className="about">
         Green Acres provides a venue where artists and collectors such as
         crafters, makers, bakers, and many others can market their goods. We

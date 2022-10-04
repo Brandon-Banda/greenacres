@@ -19,6 +19,10 @@ Change the website title dynamically dependent on page
 
 // TODO
 
+- [ ] Use media queries for responsiveness
+- [ ] Add maxwidth to apply page
+- [ ] style FAQ page (more center and higher) on 1080p
+- [ ] fix clickAwayListener
 - [ ] create base64 image onClick save and display it after signing
 - [ ] make a link to directions on the address at the top
 
