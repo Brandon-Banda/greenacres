@@ -14,7 +14,7 @@
 .wrapper {
   display: flex;
   width: 100vw;
-  min-height: 100vw;
+  padding: 50px;
   justify-content: center;
   align-items: center;
 }

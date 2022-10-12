@@ -19,6 +19,8 @@ Change the website title dynamically dependent on page
 
 // TODO
 
+- [ ] fix the white background when scrolling
+- [ ] fix the faq background pic from being scroll-viewed.
 - [ ] Use media queries for responsiveness
 - [ ] Add maxwidth to apply page
 - [ ] style FAQ page (more center and higher) on 1080p
