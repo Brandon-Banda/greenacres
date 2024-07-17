@@ -1,0 +1,41 @@
+.box {
+    padding: 80px 60px;
+    background: black;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 60px;
+  }
+  
+  .heading {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .row {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text {
+    font-size: 18px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
